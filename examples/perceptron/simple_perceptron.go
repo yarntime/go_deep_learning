@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/yarntime/go_deep_learning/perceptron"
 	"fmt"
+	"github.com/yarntime/go_deep_learning/perceptron"
 )
 
-type SimpleActivator struct {}
+type SimpleActivator struct{}
 
 func (s *SimpleActivator) Activator(x float64) float64 {
 	if x > 0 {
@@ -15,7 +15,7 @@ func (s *SimpleActivator) Activator(x float64) float64 {
 	}
 }
 
-var trainData = [][]float64{{1,1},{0,0},{1,0},{0,1}}
+var trainData = [][]float64{{1, 1}, {0, 0}, {1, 0}, {0, 1}}
 var label = []float64{1, 0, 0, 0}
 
 func main() {

@@ -1,24 +1,24 @@
 package perceptron
 
 import (
-	"github.com/yarntime/go_deep_learning/interfaces"
-	"github.com/pkg/errors"
 	"fmt"
+	"github.com/pkg/errors"
+	"github.com/yarntime/go_deep_learning/interfaces"
 )
 
 type Perceptron struct {
-	Number int
+	Number    int
 	Activator interfaces.Activator
-	Weights []float64
-	Bias    float64
+	Weights   []float64
+	Bias      float64
 }
 
 func NewPerceptron(number int, activator interfaces.Activator) *Perceptron {
 	return &Perceptron{
-		Number: number,
+		Number:    number,
 		Activator: activator,
-		Weights: make([]float64, number),
-		Bias: 0.0,
+		Weights:   make([]float64, number),
+		Bias:      0.0,
 	}
 }
 

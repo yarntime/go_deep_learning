@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/yarntime/go_deep_learning/perceptron"
 	"github.com/yarntime/go_deep_learning/interfaces"
+	"github.com/yarntime/go_deep_learning/perceptron"
 )
 
 type LinerUnit struct {
@@ -16,13 +16,13 @@ func NewLinerUnit(number int, activator interfaces.Activator) *LinerUnit {
 	}
 }
 
-type LinerActivator struct {}
+type LinerActivator struct{}
 
 func (l *LinerActivator) Activator(x float64) float64 {
 	return x
 }
 
-var lineData = [][]float64{{5},{3},{8},{1.4},{10.1}}
+var lineData = [][]float64{{5}, {3}, {8}, {1.4}, {10.1}}
 var lineValue = []float64{5500, 2300, 7600, 1800, 11400}
 
 func main() {
