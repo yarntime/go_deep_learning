@@ -19,8 +19,7 @@ var trainData = [][]float64{{1,1},{0,0},{1,0},{0,1}}
 var label = []float64{1, 0, 0, 0}
 
 func main() {
-	s := &SimpleActivator{}
-	p := perceptron.NewPerceptron(2, s)
+	p := perceptron.NewPerceptron(2, &SimpleActivator{})
 	p.Fit(trainData, label, 0.01, 100)
 	predictedValue, _ := p.Predict([]float64{0, 1})
 	fmt.Printf("%f\n", predictedValue)
