@@ -7,11 +7,6 @@ type Connection struct {
 	Gradient       float64
 }
 
-type Layer struct {
-	LayerIndex int
-	Nodes      []*Node
-}
-
 type Network struct {
 	Connections []*Connection
 	Layers      []*Layer
