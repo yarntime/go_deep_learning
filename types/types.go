@@ -1,14 +1,5 @@
 package types
 
-type Node struct {
-	LayerIndex int
-	NodeIndex  int
-	DownStream []*Connection
-	UpStream   []*Connection
-	Output     float64
-	Delta      float64
-}
-
 type Connection struct {
 	UpStreamNode   *Node
 	DownStreamNode *Node
